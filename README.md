@@ -58,7 +58,7 @@ def wiki_web_parser(url):
     print(f"CSV file '{marque}_liens.csv' created successfully!")
 ```
 
-    ## 👥 The Team (Grenoble IAE)
+## 👥 The Team (Grenoble IAE)
 Project realized by:
 * **Abdoullah BOUZIAN**
 * **Haroun LAHSSINI**
