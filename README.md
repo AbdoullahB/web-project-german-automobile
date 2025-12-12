@@ -1,40 +1,36 @@
-# 🚗 Les Icônes de l’Automobile Allemande
+# 🚗 German Automotive Icons
 
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)  ![Data Viz](https://img.shields.io/badge/Data_Viz-Flourish-orange?style=for-the-badge)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Data Viz](https://img.shields.io/badge/Data_Viz-Flourish-orange?style=for-the-badge)
 
-## 📖 À propos du projet
-Ce projet a été réalisé dans le cadre du cours de "Technologies Web" au **Grenoble IAE**.
-L'objectif était de concevoir un site web **mono-page (Single Page Application)** complet, structuré et enrichi par des données réelles, sur le thème de l'industrie automobile allemande.
+## 📖 About the Project
+This project was developed as part of the "Web Technologies" course at **Grenoble IAE**.
+The goal was to design a complete **Single Page Application (SPA)**, structured and enriched with real-world data regarding the German automotive industry.
 
-Il combine présentation historique, analyse technologique et visualisation de données économiques.
+It combines historical presentation, technological analysis, and economic data visualization.
 
-![Aperçu du site](german_auto.png)
+![Website Preview](german_auto.png)
 
-## ✨ Fonctionnalités Principales
+## 🐍 Python Automation: Web Scraping
+To populate the project with accurate data without manual copying and pasting, I developed a **Python automation script**.
 
-### 1. Structure Sémantique & Navigation
-* **Navigation fluide :** Menu sticky permettant d'accéder rapidement aux sections (ancres HTML).
-* **Architecture claire :** Utilisation des balises sémantiques HTML5 (`<header>`, `<main>`, `<section>`, `<footer>`).
+### The Challenge
+Collecting lists of car models for multiple manufacturers from Wikipedia is tedious and error-prone when done manually. The URLs always followed the same pattern, but the content varied.
 
-### 2. Contenu Riche & Multimédia
-* **Présentation des marques :** Fiches détaillées pour BMW, Mercedes-Benz, Audi, Porsche et Volkswagen.
-* **Focus Porsche :** Intégration d'une vidéo YouTube (`<iframe>`) retraçant l'histoire de la marque.
-* **Documentation externe :** Intégration directe d'une étude PDF de l'**Ifri** sur l'avenir de l'automobile allemande.
-* **Tableaux comparatifs :** Mise en forme de données techniques sur les modèles iconiques (Golf GTI, 911, M3...).
+### The Solution
+I created a script (`scraper.py`) using **Requests** and **BeautifulSoup** that automates this process.
 
-### 3. Data Visualisation (Open Data)
-Intégration de graphiques interactifs générés via **Flourish**, basés sur des données réelles du marché automobile :
-* *L'intégration se fait via des scripts JavaScript pour un rendu dynamique.*
+**Key Features of my Code:**
+* **Dynamic URL Parsing:** The script automatically extracts the brand name from the URL using `url.split`.
+* **Smart Filtering:** It parses the HTML to retrieve only relevant model links, excluding generic Wikipedia navigation links.
+* **CSV Generation:** It automatically creates and names a `.csv` file for each brand (e.g., `BMW_liens.csv`).
+* **Interactive Loop:** I implemented a `while True` loop, allowing the user to scrape multiple manufacturers in one session until they type "stop".
 
-## 🛠️ Compétences Techniques Mises en Œuvre
-* **HTML5 :** Structure rigoureuse, gestion des images, listes et tableaux.
-* **CSS3 :** Mise en page (Flexbox), design responsive (adapté aux écrans), gestion des typographies et couleurs.
-* **Intégration Multimédia :** Gestion des iFrames (PDF/Youtube) et scripts tiers (Flourish).
-* **Travail d'équipe :** Collaboration et répartition des tâches techniques et rédactionnelles.
-
-## 👥 L'Équipe (Grenoble IAE)
-Projet réalisé par :
-* **Abdoullah BOUZIAN**
-* **Haroun LAHSSINI**
-* **Mehdi ROUGUI**
-* **Konrad SKOCZEN**
+```python
+# Snippet of the logic used to extract brand names dynamically
+def wiki_web_parser(url):
+    # Extracts "BMW" from ".../Automobile_BMW"
+    marque = url.split("Automobile_")[-1] 
+    
+    # ... (Request and Parsing logic) ...
+    
+    print(f"CSV file '{marque}_liens.csv' created successfully!")
