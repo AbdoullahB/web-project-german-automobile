@@ -1,6 +1,6 @@
 # 🚗 Les Icônes de l’Automobile Allemande
 
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![Data Viz](https://img.shields.io/badge/Data_Viz-Flourish-orange?style=for-the-badge)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)  ![Data Viz](https://img.shields.io/badge/Data_Viz-Flourish-orange?style=for-the-badge)
 
 ## 📖 À propos du projet
 Ce projet a été réalisé dans le cadre du cours de "Technologies Web" au **Grenoble IAE**.
