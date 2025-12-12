@@ -10,6 +10,28 @@ It combines historical presentation, technological analysis, and economic data v
 
 ![Website Preview](german_auto.png)
 
+## ✨ Key Web Features
+
+### 1. Semantic Structure & Navigation
+* **Smooth Navigation:** A sticky menu allows quick access to different sections (using HTML anchors).
+* **Clean Architecture:** Implementation of semantic HTML5 tags (`<header>`, `<main>`, `<section>`, `<footer>`) to ensure code quality and accessibility.
+
+### 2. Rich Content & Multimedia
+* **Brand Profiles:** Detailed presentation cards for BMW, Mercedes-Benz, Audi, Porsche, and Volkswagen.
+* **Porsche Focus:** Integration of a YouTube video (`<iframe>`) tracing the history of the brand.
+* **External Documentation:** Direct embedding of an **Ifri** PDF study regarding the future of the German automotive industry.
+* **Comparison Tables:** Styled tables displaying technical specifications of iconic models (Golf GTI, 911, M3...).
+
+### 3. Data Visualization (Open Data)
+Integration of interactive charts generated via **Flourish**, based on real market data:
+* *The integration is handled via JavaScript scripts for dynamic rendering.*
+
+## 🛠️ Implemented Technical Skills
+* **HTML5:** Rigorous structure, handling of images, lists, and complex tables.
+* **CSS3:** Advanced layout (Flexbox), **responsive design** (adapts to screen size), typography, and color management.
+* **Multimedia Integration:** Handling of iFrames (PDF/YouTube) and third-party scripts (Flourish).
+* **Teamwork:** Collaboration and distribution of both technical and editorial tasks using Git.
+
 ## 🐍 Python Automation: Web Scraping
 To populate the project with accurate data without manual copying and pasting, I developed a **Python automation script**.
 
@@ -34,3 +56,11 @@ def wiki_web_parser(url):
     # ... (Request and Parsing logic) ...
     
     print(f"CSV file '{marque}_liens.csv' created successfully!")
+```
+
+    ## 👥 The Team (Grenoble IAE)
+Project realized by:
+* **Abdoullah BOUZIAN**
+* **Haroun LAHSSINI**
+* **Mehdi ROUGUI**
+* **Konrad SKOCZEN**
